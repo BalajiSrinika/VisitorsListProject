@@ -33,7 +33,9 @@ class CreateViewModel {
         }else if img == "" {
             showAlert(message: "Please upload photos and proceed")
         }else{
-            vc.showSpinner(onView: vc.view)
+             vc.activityIndicator.startAnimating()
+            self.vc.activityIndicator.hidesWhenStopped = false
+            self.vc.activityIndicator.hidesWhenStopped = false
             db.collection("VistorsList").addDocument(data: ["Vistorname":visitorName, "purpose":purposeOfVisit,"image": img ,"date": timeStamp]) { (error) in
                 
                 if error != nil {
@@ -41,7 +43,8 @@ class CreateViewModel {
                 }
             }
             
-            vc.removeSpinner()
+            self.vc.activityIndicator.stopAnimating()
+            self.vc.activityIndicator.hidesWhenStopped = true
             _ = vc.navigationController?.popViewController(animated: true)
         }
         
@@ -49,7 +52,9 @@ class CreateViewModel {
     
     func uploadImage(){
         
-        vc.showSpinner(onView: vc.view)
+        self.vc.activityIndicator.startAnimating()
+        self.vc.activityIndicator.hidesWhenStopped = false
+        
         
         let storageRef = Storage.storage().reference()
         let value = String(Date().millisecondsSince1970)
@@ -74,7 +79,8 @@ class CreateViewModel {
                     if let urlText = url?.absoluteString {
                         print(urlText)
                         self.vc.temp = urlText
-                        self.vc.removeSpinner()
+                        self.vc.activityIndicator.stopAnimating()
+                        self.vc.activityIndicator.hidesWhenStopped = true
                     }
                 })
             })

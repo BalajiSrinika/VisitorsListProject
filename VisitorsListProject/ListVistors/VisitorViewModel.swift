@@ -18,7 +18,8 @@ class VisitorViewModel {
        
     func fetchRequest() {
         
-        vc.showSpinner(onView:vc.view)
+        vc.activityIndicator.startAnimating()
+        self.vc.activityIndicator.hidesWhenStopped = true
         
         vistorsList.removeAll()
         
@@ -56,7 +57,8 @@ class VisitorViewModel {
                 
                 DispatchQueue.main.async {
                     self.vc.tableview.reloadData()
-                    self.vc.removeSpinner()
+                    self.vc.activityIndicator.stopAnimating()
+                    self.vc.activityIndicator.hidesWhenStopped = true
                 }
             }
         }

@@ -113,12 +113,21 @@
                                     <outlet property="delegate" destination="K5e-0g-CBo" id="pHp-A8-mHK"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zVe-CX-571">
+                                <rect key="frame" x="182" y="343" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7DQ-sU-uTv"/>
+                                    <constraint firstAttribute="height" constant="50" id="emX-9B-JxO"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Ujf-16-xcr" firstAttribute="trailing" secondItem="N8L-Ea-fWT" secondAttribute="trailing" id="8sf-KN-z28"/>
                             <constraint firstItem="Ujf-16-xcr" firstAttribute="bottom" secondItem="N8L-Ea-fWT" secondAttribute="bottom" id="9Eo-nx-F4s"/>
                             <constraint firstItem="N8L-Ea-fWT" firstAttribute="top" secondItem="Ujf-16-xcr" secondAttribute="top" id="ZrY-q9-ePR"/>
+                            <constraint firstItem="zVe-CX-571" firstAttribute="centerY" secondItem="p1C-Qb-8S6" secondAttribute="centerY" id="bnY-nk-j8Y"/>
+                            <constraint firstItem="zVe-CX-571" firstAttribute="centerX" secondItem="p1C-Qb-8S6" secondAttribute="centerX" id="dUq-WR-uxq"/>
                             <constraint firstItem="N8L-Ea-fWT" firstAttribute="leading" secondItem="Ujf-16-xcr" secondAttribute="leading" id="lPl-6a-0EE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ujf-16-xcr"/>
@@ -131,12 +140,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="zVe-CX-571" id="Lvw-0o-beI"/>
                         <outlet property="tableview" destination="N8L-Ea-fWT" id="gBA-YU-ktO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBk-fJ-MpR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804.3478260869567" y="95.758928571428569"/>
+            <point key="canvasLocation" x="964" y="95"/>
         </scene>
         <!--Create Vistors View Controller-->
         <scene sceneID="nsc-e5-uif">
@@ -186,7 +196,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-profile" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-Xc-QSr" customClass="DesignableImageview" customModule="VisitorsListProject" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-profile" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-Xc-QSr" customClass="DesignableImageview" customModule="VisitorsListProject" customModuleProvider="target">
                                 <rect key="frame" x="132" y="74" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.96460121870000004" green="0.96476620440000005" blue="0.96459084750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -199,6 +209,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="t8c-C5-t1B">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aDK-3D-4bB"/>
+                                    <constraint firstAttribute="width" constant="100" id="xNI-KF-bbA"/>
+                                </constraints>
+                            </activityIndicatorView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOr-rJ-myw" customClass="DesignableButton" customModule="VisitorsListProject" customModuleProvider="target">
                                 <rect key="frame" x="132" y="74" width="150" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -222,8 +239,10 @@
                             <constraint firstItem="gOr-rJ-myw" firstAttribute="width" secondItem="DvT-Xc-QSr" secondAttribute="width" multiplier="0.566667" constant="65" id="3wl-37-Jm2"/>
                             <constraint firstItem="DvT-Xc-QSr" firstAttribute="centerX" secondItem="Fcl-cm-OX5" secondAttribute="centerX" id="8AI-hL-NCf"/>
                             <constraint firstItem="lZH-7b-oQM" firstAttribute="leading" secondItem="uy9-Ys-cg8" secondAttribute="leading" constant="20" id="FJa-0O-ItL"/>
+                            <constraint firstItem="t8c-C5-t1B" firstAttribute="centerX" secondItem="Fcl-cm-OX5" secondAttribute="centerX" id="FKa-sA-f9X"/>
                             <constraint firstItem="lZH-7b-oQM" firstAttribute="top" secondItem="DvT-Xc-QSr" secondAttribute="bottom" constant="40" id="Uoz-bl-BAm"/>
                             <constraint firstItem="gOr-rJ-myw" firstAttribute="top" secondItem="uy9-Ys-cg8" secondAttribute="top" constant="30" id="UvF-Sq-1mA"/>
+                            <constraint firstItem="t8c-C5-t1B" firstAttribute="centerY" secondItem="Fcl-cm-OX5" secondAttribute="centerY" id="fMm-Dp-aUm"/>
                             <constraint firstItem="gOr-rJ-myw" firstAttribute="height" secondItem="DvT-Xc-QSr" secondAttribute="height" multiplier="0.226667" constant="116" id="gaN-6i-Ryz"/>
                             <constraint firstItem="gOr-rJ-myw" firstAttribute="centerX" secondItem="DvT-Xc-QSr" secondAttribute="centerX" id="pjk-se-Qu1"/>
                             <constraint firstItem="uy9-Ys-cg8" firstAttribute="trailing" secondItem="lZH-7b-oQM" secondAttribute="trailing" constant="20" id="sSi-Nc-CC5"/>
@@ -232,6 +251,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gFE-sk-yk1"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="t8c-C5-t1B" id="K8e-gt-3At"/>
                         <outlet property="addImgBut" destination="gOr-rJ-myw" id="iPS-j7-kZP"/>
                         <outlet property="imageView" destination="DvT-Xc-QSr" id="OLn-nQ-aMX"/>
                         <outlet property="purposeTF" destination="krJ-pj-24x" id="7s7-3N-y8M"/>
@@ -241,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58B-9y-KHi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549.5999999999999" y="95.320197044334975"/>
+            <point key="canvasLocation" x="1772" y="95"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="34C-RK-BIq">

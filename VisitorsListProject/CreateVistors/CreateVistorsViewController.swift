@@ -19,9 +19,8 @@ class CreateVistorsViewController: UIViewController {
     @IBOutlet weak var submitBut : UIButton!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var addImgBut : UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-   
-    var activityIndicator: UIActivityIndicatorView!
     var imagePicker: ImagePicker!
     var profImg = UIImage()
     var temp = String()
@@ -40,6 +39,7 @@ class CreateVistorsViewController: UIViewController {
     
     func setDefaults(){
         self.title = "Visitor Details"
+        self.activityIndicator.hidesWhenStopped = true
     }
     
     @IBAction func showImagePicker(_ sender: UIButton) {

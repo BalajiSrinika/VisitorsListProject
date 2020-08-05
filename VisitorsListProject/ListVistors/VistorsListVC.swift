@@ -12,9 +12,9 @@ import FirebaseFirestore
 
 class VistorsListVC: UIViewController {
     
-    @IBOutlet weak var tableview: UITableView!
+   @IBOutlet weak var tableview: UITableView!
     
-    var activityIndicator: UIActivityIndicatorView!
+   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var visitorsViewModelObj : VisitorViewModel!
     
