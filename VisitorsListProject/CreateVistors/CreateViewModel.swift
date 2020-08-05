@@ -21,20 +21,21 @@ class CreateViewModel {
         let db = Firestore.firestore()
         
         vc.showSpinner(onView: vc.view)
-        let visitorName = vc.vistorsTF.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let purposeOfVisit = vc.purposeTF.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let visitorName = vc.vistorsTF.text ?? ""
+        let purposeOfVisit = vc.purposeTF.text ?? ""
+        
         let timeStamp = FirebaseFirestore.Timestamp.init(date: Date())
         let img = vc.temp
         
         if visitorName == ""{
             vc.removeSpinner()
-            showAlert(message: "Vistor name is empty")
+            showAlert(message: "Please enter Visitor Name")
         }else if purposeOfVisit == ""{
             vc.removeSpinner()
-            showAlert(message: "purpose of visit is empty")
+            showAlert(message: "Please enter the purpose of visiting")
         }else if img == "" {
             vc.removeSpinner()
-            showAlert(message: "please Upload Image")
+            showAlert(message: "Please upload photos and proceed")
         }else{
             db.collection("VistorsList").addDocument(data: ["Vistorname":visitorName, "purpose":purposeOfVisit,"image": img ,"date": timeStamp]) { (error) in
                 
@@ -57,7 +58,7 @@ class CreateViewModel {
         let value = String(Date().millisecondsSince1970)
         let storedImage = storageRef.child(value)
         
-        if let uploadData = vc.profImg.jpegData(compressionQuality: 1)
+        if let uploadData = vc.profImg.jpegData(compressionQuality: 0.5)
         {
             
             vc.addImgBut.setTitle("", for: .normal)

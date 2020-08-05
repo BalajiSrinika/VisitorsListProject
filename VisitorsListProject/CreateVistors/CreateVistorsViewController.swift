@@ -18,27 +18,13 @@ class CreateVistorsViewController: UIViewController {
     @IBOutlet weak var purposeTF : UITextField!
     @IBOutlet weak var submitBut : UIButton!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet weak var uploadBut : UIButton!{
-        didSet{
-            uploadBut.underline()
-        }
-    }
-    
-    @IBOutlet weak var addImgBut : UIButton!{
-           didSet{
-            //addImgBut.layer.cornerRadius = addImgBut.frame.width / 2
-            //addImgBut.layer.masksToBounds = true
-           }
-       }
-
+    @IBOutlet weak var addImgBut : UIButton!
     
    
     var activityIndicator: UIActivityIndicatorView!
     var imagePicker: ImagePicker!
     var profImg = UIImage()
     var temp = String()
-    
-    
     var createViewModelObj : CreateViewModel!
     
     override func viewDidLoad() {
@@ -47,13 +33,13 @@ class CreateVistorsViewController: UIViewController {
         //Initilize ViewModel
         createViewModelObj = CreateViewModel()
         createViewModelObj.vc = self
-        
+        setDefaults()
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
       
     }
     
     func setDefaults(){
-        self.title = "Schedule Vistor Time"
+        self.title = "Visitor Details"
     }
     
     @IBAction func showImagePicker(_ sender: UIButton) {
@@ -69,13 +55,15 @@ class CreateVistorsViewController: UIViewController {
  
 }
 extension CreateVistorsViewController: ImagePickerDelegate {
-
+    
     func didSelect(image: UIImage?) {
-        self.imageView.image = image
-        self.profImg = image!
-        self.createViewModelObj.uploadImage()
+        if let imageData = image{
+            self.imageView.image = imageData
+            self.profImg = imageData
+            self.createViewModelObj.uploadImage()
+        }
     }
- 
+    
 }
 
 

@@ -52,10 +52,12 @@ public protocol ImagePickerDelegate: class {
 
         if let action = self.action(for: .camera, title: "Take photo") {
             alertController.addAction(action)
+            self.pickerController.sourceType = .camera
+    
         }
-        if let action = self.action(for: .savedPhotosAlbum, title: "Camera roll") {
-            alertController.addAction(action)
-        }
+//        if let action = self.action(for: .savedPhotosAlbum, title: "Camera roll") {
+//            alertController.addAction(action)
+//        }
         if let action = self.action(for: .photoLibrary, title: "Photo library") {
             alertController.addAction(action)
         }

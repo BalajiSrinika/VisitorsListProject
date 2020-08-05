@@ -60,10 +60,11 @@ extension VistorsListVC : UITableViewDelegate,UITableViewDataSource {
         let list = visitorsViewModelObj.vistorsList[indexPath.row]
         cell.visistorsNameLbl.text = list.name
         cell.purposeLbl.text = list.purposeVisit
-        cell.timelbl.text = list.timeStamp
-        
-        let imageConv = visitorsViewModelObj.ConvertUrlToImg(img: list.vistorImg!)
-        cell.img.image = imageConv
+        cell.timelbl.text = "  \(list.timeStamp ?? "")   "
+        if let imgUrl = list.vistorImg{
+            let imageConv = visitorsViewModelObj.ConvertUrlToImg(img: imgUrl)
+            cell.img.image = imageConv
+        }
     
         return cell
     }

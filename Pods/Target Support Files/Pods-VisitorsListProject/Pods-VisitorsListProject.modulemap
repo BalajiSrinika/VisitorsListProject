@@ -1,0 +1,6 @@
+framework module Pods_VisitorsListProject {
+  umbrella header "Pods-VisitorsListProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
