@@ -64,7 +64,7 @@ class VisitorViewModel {
     
     func ConvertDateToString(date:Date) -> String{
           let df = DateFormatter()
-          df.dateFormat = "yyyy-MM-dd hh:mm a"
+          df.dateFormat = "dd-MM-yyyy hh:mm a"
           let dateString = df.string(from: date)
           return dateString
       }

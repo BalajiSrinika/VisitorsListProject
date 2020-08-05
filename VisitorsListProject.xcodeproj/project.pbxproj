@@ -22,7 +22,6 @@
 		F3EA5CFC24D9784600766CA0 /* VistorsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA5CFB24D9784600766CA0 /* VistorsListVC.swift */; };
 		F3EA5CFE24D9785400766CA0 /* CreateVistorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA5CFD24D9785400766CA0 /* CreateVistorsViewController.swift */; };
 		F3EA5D0024D98C3900766CA0 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA5CFF24D98C3900766CA0 /* Picker.swift */; };
-		F3EA5D0224D9963E00766CA0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA5D0124D9963E00766CA0 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		F3EA5CFB24D9784600766CA0 /* VistorsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistorsListVC.swift; sourceTree = "<group>"; };
 		F3EA5CFD24D9785400766CA0 /* CreateVistorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVistorsViewController.swift; sourceTree = "<group>"; };
 		F3EA5CFF24D98C3900766CA0 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
-		F3EA5D0124D9963E00766CA0 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +78,6 @@
 		F3DEB85524D9D6AB00CD7AEA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				F3EA5D0124D9963E00766CA0 /* Utilities.swift */,
 				F3DEB86224D9F11E00CD7AEA /* Design.swift */,
 				F3DEB86024D9E05B00CD7AEA /* Extensions.swift */,
 			);
@@ -275,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3EA5D0024D98C3900766CA0 /* Picker.swift in Sources */,
-				F3EA5D0224D9963E00766CA0 /* Utilities.swift in Sources */,
 				F3EA5CFC24D9784600766CA0 /* VistorsListVC.swift in Sources */,
 				F3EA5CFE24D9785400766CA0 /* CreateVistorsViewController.swift in Sources */,
 				F3EA5CE624D966BE00766CA0 /* AppDelegate.swift in Sources */,

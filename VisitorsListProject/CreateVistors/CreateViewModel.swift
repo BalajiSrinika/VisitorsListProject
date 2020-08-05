@@ -20,7 +20,6 @@ class CreateViewModel {
         
         let db = Firestore.firestore()
         
-        vc.showSpinner(onView: vc.view)
         let visitorName = vc.vistorsTF.text ?? ""
         let purposeOfVisit = vc.purposeTF.text ?? ""
         
@@ -28,15 +27,13 @@ class CreateViewModel {
         let img = vc.temp
         
         if visitorName == ""{
-            vc.removeSpinner()
             showAlert(message: "Please enter Visitor Name")
         }else if purposeOfVisit == ""{
-            vc.removeSpinner()
             showAlert(message: "Please enter the purpose of visiting")
         }else if img == "" {
-            vc.removeSpinner()
             showAlert(message: "Please upload photos and proceed")
         }else{
+            vc.showSpinner(onView: vc.view)
             db.collection("VistorsList").addDocument(data: ["Vistorname":visitorName, "purpose":purposeOfVisit,"image": img ,"date": timeStamp]) { (error) in
                 
                 if error != nil {
