@@ -41,9 +41,7 @@ class VistorsListVC: UIViewController {
     }
     
     fileprivate func fetchResults(){
-        self.visitorsViewModelObj.fetchRequest { (response) in
-            print(response)
-        }
+        self.visitorsViewModelObj.fetchRequest()
     }
  
 }

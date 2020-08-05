@@ -16,7 +16,7 @@ class VisitorViewModel {
     
     var vistorsList = [Vistors]()
        
-    func fetchRequest(completionHandler: @escaping ([Vistors]) -> Void) {
+    func fetchRequest() {
         
         vc.showSpinner(onView:vc.view)
         
@@ -31,7 +31,7 @@ class VisitorViewModel {
                 print("Error getting documents: \(err)")
             } else {
                 
-                for (i,document) in querySnapshot!.documents.enumerated() {
+                for (_,document) in querySnapshot!.documents.enumerated() {
                     
                     //print("\(document.documentID) => \(document.data())")
                     
@@ -52,9 +52,6 @@ class VisitorViewModel {
                     $0.timeStamp!.compare($1.timeStamp!) == .orderedAscending
                    })
                     
-                    completionHandler(self.vistorsList)
-                    
-                    print("\(self.vistorsList[i].timeStamp!)")
                 }
                 
                 DispatchQueue.main.async {

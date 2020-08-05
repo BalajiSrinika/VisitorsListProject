@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
        
-        checkPhotoLibraryPermission()
+    //    checkPhotoLibraryPermission()
         
         FirebaseApp.configure()
         
@@ -42,33 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-    
-    func checkPhotoLibraryPermission() {
-           let status = PHPhotoLibrary.authorizationStatus()
-           switch status {
-           case .authorized:
-           //handle authorized status
-            print("authorized")
-           case .denied, .restricted :
-           //handle denied status
-              print("restricted")
-           case .notDetermined:
-               // ask for permissions
-               PHPhotoLibrary.requestAuthorization { status in
-                   switch status {
-                   case .authorized:
-                   // as above
-                      print("authorized")
-                   case .denied, .restricted:
-                   // as above
-                      print("restricted")
-                   case .notDetermined:
-                   // won't happen but still
-                      print("not determined")
-                   }
-               }
-           }
-       }
 
 
 }

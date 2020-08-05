@@ -147,31 +147,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lZH-7b-oQM">
-                                <rect key="frame" x="20" y="264" width="374" height="170"/>
+                                <rect key="frame" x="20" y="264" width="374" height="150"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="VistorsName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsB-np-ap0">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vistor Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsB-np-ap0">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="sdt-Y2-pQv"/>
+                                            <constraint firstAttribute="height" constant="35" id="sdt-Y2-pQv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Purpose" textAlignment="natural" minimumFontSize="17" background="time to entrance" translatesAutoresizingMaskIntoConstraints="NO" id="krJ-pj-24x">
-                                        <rect key="frame" x="0.0" y="60" width="374" height="40"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Purpose of Visiit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="krJ-pj-24x">
+                                        <rect key="frame" x="0.0" y="55" width="374" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="CKB-ek-Obg"/>
+                                            <constraint firstAttribute="height" constant="35" id="CKB-ek-Obg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcE-Hf-DFB" customClass="DesignableButton" customModule="VisitorsListProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="374" height="50"/>
+                                        <rect key="frame" x="0.0" y="110" width="374" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ha7-9t-ZBK"/>
+                                            <constraint firstAttribute="height" constant="40" id="ha7-9t-ZBK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -264,6 +264,5 @@
     </scenes>
     <resources>
         <image name="placeholder-profile" width="600" height="623"/>
-        <image name="time to entrance" width="128" height="128"/>
     </resources>
 </document>
